@@ -5,11 +5,11 @@ sudo apt update && sudo apt install nodejs npm
 sudo npm install -g pm2
 
 # stop any instance of our application running currently
-pm2 stop DevOpsProject23
+pm2 stop SimpleApplication
 
 # change directory into folder where application is downloaded
-sudo chmod 777 DevOpsProject23/
-cd DevOpsProject23/
+sudo chmod 777 SimpleApplication/
+cd SimpleApplication/
 
 # Install application dependancies
 npm install
@@ -17,7 +17,7 @@ npm install
 echo $PRIVATE_KEY > privatekey.pem
 echo $SERVER > server.crt
 
-# Start the application with the process name DevOpsProject23 using pm2
-pm2 start ./bin/www --name DevOpsProject23
+# Start the application with the process name SimpleApplication using pm2
+pm2 start ./bin/www --name SimpleApplication
 
 echo "deploy code"
